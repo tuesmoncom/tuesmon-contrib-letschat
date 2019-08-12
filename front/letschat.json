@@ -1,0 +1,9 @@
+{
+    "name": "Let's Chat",
+    "slug": "letschat",
+    "description": "Integrate Tuesmon with a Let's Chat server (http://sdelements.github.io/lets-chat/)",
+    "type": "admin",
+    "module": "tuesmonContrib.letschat",
+    "template": "/plugins/letschat/letschat.html",
+    "js": "/plugins/letschat/letschat.js"
+}

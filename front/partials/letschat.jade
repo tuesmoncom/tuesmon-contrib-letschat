@@ -1,0 +1,199 @@
+div(contrib-letschat-webhooks, ng-controller="ContribLetsChatAdminController as ctrl")
+    header
+        h1
+            span.project-name
+                | {{::project.name}}
+            span.green
+                | {{::sectionName}}
+
+    form
+        label(for="url") Let's Chat webhook url
+        div.contrib-form-wrapper
+            fieldset.contrib-input
+                input(
+                    type="text"
+                    name="url"
+                    ng-model="letschathook.url"
+                    placeholder="Let's Chat messages endpoint"
+                    id="url"
+                    data-type="url"
+                )
+            fieldset.contrib-test(ng-show="letschathook.id")
+                a.button-gray(href="", title="Test", ng-click="ctrl.testHook()")
+                    span Test
+
+        label(for="token") Let's Chat Auth token
+        div.contrib-form-wrapper
+            fieldset.contrib-input
+                input(
+                    type="text"
+                    name="token"
+                    ng-model="letschathook.token"
+                    placeholder="Let's Chat auth token"
+                    id="token"
+                )
+
+
+        fieldset
+              h2 Notify Epics
+              div.check-item
+                  span Create
+                  div.check
+                      input(type="checkbox" name="notification" ng-model="letschathook.notify_epic_create")
+                      div
+                      span.check-text.check-yes(translate="COMMON.YES")
+                      span.check-text.check-no(translate="COMMON.NO")
+
+              div.check-item
+                  span Change
+                  div.check
+                      input(type="checkbox" name="notification" ng-model="letschathook.notify_epic_change")
+                      div
+                      span.check-text.check-yes(translate="COMMON.YES")
+                      span.check-text.check-no(translate="COMMON.NO")
+
+              div.check-item
+                  span Delete
+                  div.check
+                      input(type="checkbox" name="notification" ng-model="letschathook.notify_epic_delete")
+                      div
+                      span.check-text.check-yes(translate="COMMON.YES")
+                      span.check-text.check-no(translate="COMMON.NO")
+
+
+        fieldset
+            h2 Notify Epics related user stories
+            div.check-item
+                span Create
+                div.check
+                    input(type="checkbox" name="notification" ng-model="letschathook.notify_relateduserstory_create")
+                    div
+                    span.check-text.check-yes(translate="COMMON.YES")
+                    span.check-text.check-no(translate="COMMON.NO")
+
+            div.check-item
+                span Delete
+                div.check
+                    input(type="checkbox" name="notification" ng-model="letschathook.notify_relateduserstory_delete")
+                    div
+                    span.check-text.check-yes(translate="COMMON.YES")
+                    span.check-text.check-no(translate="COMMON.NO")
+
+
+        fieldset
+            h2 Notify User Stories
+            div.check-item
+                span Create
+                div.check
+                    input(type="checkbox" name="notification" ng-model="letschathook.notify_userstory_create")
+                    div
+                    span.check-text.check-yes(translate="COMMON.YES")
+                    span.check-text.check-no(translate="COMMON.NO")
+
+            div.check-item
+                span Change
+                div.check
+                    input(type="checkbox" name="notification" ng-model="letschathook.notify_userstory_change")
+                    div
+                    span.check-text.check-yes(translate="COMMON.YES")
+                    span.check-text.check-no(translate="COMMON.NO")
+
+            div.check-item
+                span Delete
+                div.check
+                    input(type="checkbox" name="notification" ng-model="letschathook.notify_userstory_delete")
+                    div
+                    span.check-text.check-yes(translate="COMMON.YES")
+                    span.check-text.check-no(translate="COMMON.NO")
+
+
+        fieldset
+            h2 Notify Tasks
+            div.check-item
+                span Create
+                div.check
+                    input(type="checkbox" name="notification" ng-model="letschathook.notify_task_create")
+                    div
+                    span.check-text.check-yes(translate="COMMON.YES")
+                    span.check-text.check-no(translate="COMMON.NO")
+
+            div.check-item
+                span Change
+                div.check
+                    input(type="checkbox" name="notification" ng-model="letschathook.notify_task_change")
+                    div
+                    span.check-text.check-yes(translate="COMMON.YES")
+                    span.check-text.check-no(translate="COMMON.NO")
+
+            div.check-item
+                span Delete
+                div.check
+                    input(type="checkbox" name="notification" ng-model="letschathook.notify_task_delete")
+                    div
+                    span.check-text.check-yes(translate="COMMON.YES")
+                    span.check-text.check-no(translate="COMMON.NO")
+
+
+        fieldset
+            h2 Notify Issues
+            div.check-item
+                span Create
+                div.check
+                    input(type="checkbox" name="notification" ng-model="letschathook.notify_issue_create")
+                    div
+                    span.check-text.check-yes(translate="COMMON.YES")
+                    span.check-text.check-no(translate="COMMON.NO")
+
+            div.check-item
+                span Change
+                div.check
+                    input(type="checkbox" name="notification" ng-model="letschathook.notify_issue_change")
+                    div
+                    span.check-text.check-yes(translate="COMMON.YES")
+                    span.check-text.check-no(translate="COMMON.NO")
+
+            div.check-item
+                span Delete
+                div.check
+                    input(type="checkbox" name="notification" ng-model="letschathook.notify_issue_delete")
+                    div
+                    span.check-text.check-yes(translate="COMMON.YES")
+                    span.check-text.check-no(translate="COMMON.NO")
+
+
+        fieldset
+            h2 Notify Wiki
+            div.check-item
+                span Create
+                div.check
+                    input(type="checkbox" name="notification" ng-model="letschathook.notify_wikipage_create")
+                    div
+                    span.check-text.check-yes(translate="COMMON.YES")
+                    span.check-text.check-no(translate="COMMON.NO")
+
+            div.check-item
+                span Change
+                div.check
+                    input(type="checkbox" name="notification" ng-model="letschathook.notify_wikipage_change")
+                    div
+                    span.check-text.check-yes(translate="COMMON.YES")
+                    span.check-text.check-no(translate="COMMON.NO")
+
+            div.check-item
+                span Delete
+                div.check
+                    input(type="checkbox" name="notification" ng-model="letschathook.notify_wikipage_delete")
+                    div
+                    span.check-text.check-yes(translate="COMMON.YES")
+                    span.check-text.check-no(translate="COMMON.NO")
+
+        button(type="submit", class="hidden")
+        a.button-green.submit-button(href="", title="Save", ng-click="ctrl.updateOrCreateHook(letschathook)")
+            span Save
+
+    div.help-button
+        tg-svg(
+            svg-icon="icon-question"
+        )
+        p.small Let's Chat messages endpoint [http|https]://[host]/rooms/[room_id_or_slug]/messages
+        p.small For example: <a>http://localhost:5000/rooms/54eafca13b8263d2cb5a48b1/messages</a>
